@@ -25,7 +25,7 @@ class ProdiController extends Controller
 
         /*$prodi = DB::select("SELECT prodi., fakultas.nama as namaf FROM prodi INNER JOIN fakultas ON prodi.fakultas_id = fakultas.id");*/
         
-        return view("prodi.index")->with('prodis', $prodis);
+        return view("prodi.index")->with('prodi', $prodi);
     }
 
     public function show(Prodi $prodi){
