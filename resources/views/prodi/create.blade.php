@@ -17,7 +17,7 @@
                     {{ session()-> get('info') }}
                 </div>
                 @endif
-                <form action="{{ url('prodi/store') }}" method="post">
+                <form action="{{ url('prodi/store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         {{-- <input type="hidden" name="_token" value="Qi5kFmEnEpDcTFgwArz2PEP2FW2f6IJK4kXm8e3N"> --}}
@@ -27,6 +27,10 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
+                    <div class ="form-group">
+                        <label for="foto">Gambar/Logo </label>
+                        <input typr ="file" name = "foto"> 
+                    <div>
                     <button type="submit" class="btn btn-primary mt-2">Simpan</button>
                 </form>
             </div>
